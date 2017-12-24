@@ -1,0 +1,74 @@
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway:500" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-1.12.4.js"
+    integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+    crossorigin="anonymous"></script>
+
+    <style>
+        .div1{
+            margin-top: 15%;
+        }
+        .btn{
+            font-family: 'Raleway', sans-serif;
+            font-size: 24px;
+            padding:20px 35px 20px 35px;
+            border-radius:3px;
+            box-shadow:4px 2px 2px .5px #666;
+            background-color:#7952b3;
+            border:#563d7c;
+            transition: all 0.3s ease 0s;
+            outline:none;
+        }
+        .btn:hover{
+            background-color:#533C79;
+            color: white;
+        }
+        h1{
+            padding-bottom:.3%;
+            font-size:3em;
+            font-family: 'Lobster', cursive;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div>
+        <input id="air" type="button" value="Rap Air Horn">
+        <input id="wrap" type="button" value="Wrap It Up">
+    </div>
+    <div align="center" class="div1 airhorn">
+        <h1>Wrap That Shit Up, Fam.</h1>
+    <a onclick="playSound('rap-horn.mp3')">
+        <input class="btn" type="button" value="Wrap it Up">
+     </a>
+    </div>
+     <div id="sound"></div>
+     <div align="center" class="div1">
+        <h1>Wrap That Shit Up, Fam.</h1>
+    <a onclick="playSound('barry_get_out.wav')">
+        <input class="btn" type="button" value="Wrap it Up">
+     </a>
+    </div>
+     <div id="sound"></div>
+     
+     <script>
+        var playSound = function (soundFile) {
+           $("#sound").html("<embed src=\"" + soundFile + "\" hidden=\"true\" autostart=\"true\" />");
+        }
+        $('#air').click(function(){
+            $(".airhorn").toggle();
+            $('#sound').hide();
+        })
+
+     </script>
+
+
+</body>
+
+
+
+
+</html>
